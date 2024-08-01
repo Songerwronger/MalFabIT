@@ -1,9 +1,14 @@
 <?php
 
-$host = "localhost";
-$dbname = "login_db";
-$username = "admin";
-$password = "fIez7FjshC9L3Djv9ocjXt";
+require 'vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$host = getenv('DB_HOST');
+$dbname = getenv('DB_NAME');
+$username = getenv('DB_USER');
+$password = getenv('DB_PASS');
 
 $mysqli = new mysqli($host, $username, $password, $dbname);
 
@@ -12,5 +17,4 @@ if ($mysqli->connect_errno) {
 }
 
 return $mysqli;
-
 ?>
