@@ -63,7 +63,7 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
 			  <a class="nav-link nav-link-custom" href="index.php">Home</a>
 			  <a class="nav-link nav-link-custom" href="index.php#services">Services</a>
 			  <a class="nav-link nav-link-custom" href="index.php#it">IT</a>
-			  <a class="nav-link nav-link-custom" href="index.php#fab">Fabrication</a>
+			  
 			</div>
 			<a href="signup.html">
 			<img src="account-svgrepo-com.svg" alt="" width="40" height="50">
@@ -105,6 +105,36 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
 	    </div>
 	</div>
 </form>
+
+
+
+<footer>
+    <div class="footerContainer">
+        <div class="logo2">
+            <img src="Logo.svg" alt="" width="" height="45" href="index.php">
+        </div>
+        <div class="footerNav text-center">
+            <ul class="footermobile footeripad" style="white-space: nowrap;">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="aboutus.php">About</a></li>
+                <li><a href="privpolicy.php">Privacy Policy</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="footerBottom">
+        <p>Copyright &copy;2024; Designed and created by Jake Mallinson<span class="designer">MalFabIT</span></p>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
 
 
 </body>

@@ -27,6 +27,10 @@ body {
     margin-right: 15px;
 }
 
+.logo2 {
+  text-align: center !important;
+}
+
 
 
 
@@ -51,7 +55,10 @@ body {
         font-size: 1.3rem;
     }
 
-    
+    .footeripad {
+      font-size: 0.7rem;
+      padding-right: 42px;
+    }
 }
 
 
@@ -61,8 +68,9 @@ body {
     .small-screen-margin {
       margin-left: 50px;
       margin-right: 50px;
-    
     }
+
+
 
     .text-width-phone {
         margin-left: 50px;
@@ -79,7 +87,9 @@ body {
         display: none;
     }
 
-
+ .footermobile {
+  padding-right: 3rem;
+ }
     
 
 
@@ -384,8 +394,7 @@ min-width: 80vw;
     border-radius: 50px; 
     border: 5px solid transparent; 
     background: linear-gradient(45deg,red,blue) border-box; 
-
-  }
+}
   
   .carouselcus img:first-child {
     margin-left: 0px;
@@ -412,11 +421,45 @@ min-width: 80vw;
   // Mobile and smaller size
 @media (max-width: 580px) {
 
-    .fsphone-2h {
+    .fsphone-2h2 {
         padding-top: 50px;
         font-size: 1.8rem;
     }
 
+    .carouselcusphone img {
+      height: 200px;
+      object-fit: cover;
+      -webkit-user-select: none;
+      user-select: none;
+      margin-left: 14px;
+      width: calc(100% / 3);
+      border-radius: 50px; 
+      border: 5px solid transparent; 
+      background: linear-gradient(45deg,red,blue) border-box; 
+  }
+
+
+  .imgcoverphone i {
+    top: 25%;
+    height: 44px;
+    width: 44px;
+    cursor: pointer;
+    font-size: 1.15rem;
+    position: absolute;
+    text-align: center;
+    line-height: 44px;
+    background: #ffffff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+    color: rgb(255, 0, 0);
+    box-shadow: 0 0 1em rgba(4, 0, 255, 0.5);
+    transition: transform 0.7s linear;
+  }
+
+  .carophoneheight {
+    margin-top: 15rem !important;
+  }
 
     .carouselcus img {
         width: calc(100% / 2);
@@ -430,6 +473,8 @@ min-width: 80vw;
     .ipadsize {
         padding-top: 50px;
     }
+
+
 
 }
 
@@ -734,6 +779,7 @@ h6 span{
 
 
 
+
 // Mobile and smaller size
 @media (max-width: 580px) {
   .loginsignupmobile {
@@ -814,6 +860,101 @@ h6 span{
   margin-right: 1rem !important;
 }
 
+
+
+//Footer code
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+footer {
+  background-color: #ffffff;
+  width: 80%;
+  margin: 0 auto; /* This will center the footer horizontally */
+}
+
+.footerContainer{
+  padding: 70px 30px 20px ;
+}
+
+
+.socialIcons{
+  display: flex;
+  justify-content: center;
+}
+.socialIcons a{
+  text-decoration: none;
+  padding:  10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+.socialIcons a i{
+  font-size: 2em;
+  color: black;
+  opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+  background-color: #111;
+  transition: 0.5s;
+}
+.socialIcons a:hover i{
+  color: white;
+  transition: 0.5s;
+}
+.footerNav{
+  margin: 30px 0;
+}
+.footerNav ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+.footerNav ul li a{
+  color:rgb(0, 0, 0);
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+  opacity: 1;
+}
+.footerBottom{
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+.footerBottom p{
+  color: white;
+}
+.designer{
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+@media (max-width: 700px){
+  .footerNav ul{
+      flex-direction: column;
+  } 
+  .footerNav ul li{
+      width:100%;
+      text-align: center;
+      margin: 10px;
+  }
+  .socialIcons a{
+      padding: 8px;
+      margin: 4px;
+  }
+}
 
 
 

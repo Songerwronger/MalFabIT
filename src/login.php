@@ -33,8 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 ?>
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 			  <a class="nav-link nav-link-custom" href="index.php">Home</a>
 			  <a class="nav-link nav-link-custom" href="index.php">Services</a>
 			  <a class="nav-link nav-link-custom" href="index.php">IT</a>
-			  <a class="nav-link nav-link-custom" href="index.php">Fabrication</a>
+			  
 			</div>
 			<a href="login.php">
 			<img src="account-svgrepo-com.svg" alt="" width="40" height="50">
@@ -81,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
 
-<form action="login.php" method="post" novalidate>										 
+<form action="login.php" method="post" novalidate class="text-width-phone">										 
 	<label for="reg-log"></label>
 			<div class="card-3d-wrap mx-auto">
 							<div class="card-3d-wrapper">
@@ -99,7 +97,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 												<img src="password-svgrepo-com.svg" height="30" width="30" style="margin-right: 85%; margin-top: -4.7rem;" alt="">
 											</div>
 											<button type="submit" class="btn mt-4">Submit</button>
-
 				      					</div>
 			      					</div>
 			      				</div>
@@ -113,7 +110,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </form>
 
 
-<a href="forgotpassword.php">Forgot Password?</a>
+<div class="container" style="margin-top: 2.5rem;">
+    <div class="row">
+        <div class="col text-center">
+            <a href="forgotpassword.php" class="mx-auto d-block" style="padding-bottom: 50px;">Forgot Password?</a>
+        </div>
+    </div>
+</div>
+
 
 
 <?php if ($is_invalid): ?>
@@ -122,6 +126,37 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 	</div>
 <?php endif; ?>
+
+
+<footer style="">
+    <div class="footerContainer">
+        <div class="logo2">
+            <img src="Logo.svg" alt="" width="" height="45" href="index.php">
+        </div>
+        <div class="footerNav text-center">
+            <ul class="footermobile footeripad" style="white-space: nowrap;">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="aboutus.php">About</a></li>
+                <li><a href="privpolicy.php">Privacy Policy</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="footerBottom">
+        <p>Copyright &copy;2024; Designed and created by Jake Mallinson<span class="designer">MalFabIT</span></p>
+    </div>
+</footer>
+
+
+
+</body>
+
+</html>
+
+
+
+
 
 
 

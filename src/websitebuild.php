@@ -37,7 +37,7 @@ if (isset($_SESSION["user_id"])) {
 
 <style>
     body {
-        background-image: url('pcbuild.png');
+        background-image: url('webdev1.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -47,25 +47,35 @@ if (isset($_SESSION["user_id"])) {
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">
-                <img src="Logo.svg" alt="" width="" height="45">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto mr-15 fs-4 fw-bold navigationbar gap-lg-5">
-                    <a class="nav-link nav-link-custom" href="index.php">Home</a>
-                    <a class="nav-link nav-link-custom" href="index.php#services">Services</a>
-                    <a class="nav-link nav-link-custom" href="index.php#it">IT</a>
-                    <a class="nav-link nav-link-custom" href="index.php#fab">Fabrication</a>
-                </div>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.php">
+      <img src="Logo.svg" alt="" width="" height="45">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto mr-10 fs-4 fw-bold navigationbar gap-lg-5">
+        <a class="nav-link nav-link-custom" href="index.php">Home</a>
+        <a class="nav-link nav-link-custom" href="index.php#services">Services</a>
+        <a class="nav-link nav-link-custom" href="#it">IT</a>
+      </div>
+      <?php if (isset($user)): ?>
+        <p class="position-absolute top-0 end-0" style="margin-top: -0.5rem; margin-right: 4rem">
+        <div class="navbar-nav">
+          <a class="nav-link" href="logout.php">Log out</a>
+          </div>
+        </p>
+      <?php else: ?>
+        <div class="navbar-nav">
+          <a href="login.php" class="nav-link">Log in</a>
+          <a href="signup.html" class="nav-link">Sign up</a>
         </div>
-    </nav>
+      <?php endif; ?>
+    </div>
+  </div>
+</nav>
 
 
 
@@ -84,20 +94,19 @@ if (isset($_SESSION["user_id"])) {
 
 
 
-
-
-
-          <div class="imgcover">
-          <div class="ourgal fsphone-2h ipadsize"><p class="fs-1 fsphone-1h ipadsize">DEVELOPMENT</p></div>
-            <i id="left" class="fa-solid fa-angle-left"></i>
-            <div class="carouselcus">
+     <div class="imgcover imgcoverphone carophoneheight">
+            <div class="ourgal fsphone-2h2 ipadsize"><p class="fs-1 fsphone-1h">SOME OF OUR WORK</p></div>
+            <i id="left" class="fa-solid fa-angle-left imgcoverphone"></i>
+            <div class="carouselcus carouselcusphone">
               <img src="webdev/1.jpg" alt="Image 1">
               <img src="webdev/2.jpg" alt="Image 2">
               <img src="webdev/3.jpg" alt="Image 3">
               <img src="webdev/4.jpg" alt="Image 4">
             </div>
-            <i id="right" class="fa-solid fa-angle-right"></i>
+            <i id="right" class="fa-solid fa-angle-right imgcoverphone"></i>
           </div>
+
+
         
           
           <section id="contact text-center" style="margin-top: 40rem;">
@@ -170,10 +179,7 @@ if (isset($_SESSION["user_id"])) {
                                     <option value="Repairs">Repairs</option>
                                     <option value="Website">Website Development</option>
                                     <option value="selling tech">Selling Items</option>
-                                    <option value ="Welding" selected>Welding</option>
-                                    <option value="Modifications">Modifications</option>
-                                    <option value="Fabrication">Fabrications</option>
-                                    <option value="Bending">Bending</option>
+                                    
                                    
                                 </select>
                                 </div>
@@ -202,56 +208,26 @@ if (isset($_SESSION["user_id"])) {
           </section>
 
 
-    <?php if (isset($user)): ?>
 
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: absolute; width: 100%; top: 0;">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">
-      <img src="Logo.svg" alt="" width="" height="45">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ms-auto mr-10 fs-4 fw-bold navigationbar gap-lg-5">
-        <a class="nav-link nav-link-custom" href="index.php">Home</a>
-        <a class="nav-link nav-link-custom" href="index.php#services">Services</a>
-        <a class="nav-link nav-link-custom" href="index.php#it">IT</a>
-        <a class="nav-link nav-link-custom" href="index.php#fab">Fabrication</a>
-      </div>
-      
-      <img src="account-svgrepo-com.svg" alt="" width="40" height="50">
-      
-      </a>
+          <footer>
+    <div class="footerContainer">
+        <div class="logo2">
+            <img src="Logo.svg" alt="" width="" height="45" href="index.php">
+        </div>
+        <div class="footerNav text-center">
+            <ul class="footermobile footeripad" style="white-space: nowrap;">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="aboutus.php">About</a></li>
+                <li><a href="privpolicy.php">Privacy Policy</a></li>
+                <li><a href="contactus.php">Contact Us</a></li>
+            </ul>
+        </div>
+        
     </div>
-  </div>
-</nav>
-
-
-
-
-
-
-<p class="position-absolute top-0 end-0" style="margin-top: -0.5rem; margin-right: 4rem">
-        <a class="loginsignupbtn logoutsmall" style="display: block; margin: 0 auto; text-align: center; margin-top: 1.4rem; z-index: 10; width: 100px; margin-right: 1rem;" href="logout.php">Log out</a>
-    </p>
-
-
-    <?php else: ?> 
-
-      <p class="position-absolute top-0 end-0 loginsignupIPAD loginsignupIPADplus loginsignupmobile mx-auto mr-1" style="margin-top: 1.5rem; margin-right: 2rem; margin-top: 15px; right: 10%">
-        <a href="login.php" class="me-2 loginsignupbtn loginsignupbtnmob loginleftshiftmob">Log in</a>
-        <a href="signup.html" class="loginsignupbtn loginsignupbtnmob">Sign up</a>
-      </p>
-
-
-    <?php endif; ?>
-
-
-
+    <div class="footerBottom">
+        <p>Copyright &copy;2024; Designed and created by Jake Mallinson<span class="designer">MalFabIT</span></p>
+    </div>
+</footer>
 
 
 
