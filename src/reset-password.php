@@ -61,7 +61,7 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
 		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			<div class="navbar-nav ms-auto mr-10 fs-4 fw-bold navigationbar gap-lg-5">
 			  <a class="nav-link nav-link-custom" href="index.php">Home</a>
-			  <a class="nav-link nav-link-custom" href="index.php#services">Services</a>
+			  <a class="nav-link nav-link-custom" href="index.php#services">Reviews</a>
 			  <a class="nav-link nav-link-custom" href="index.php#it">IT</a>
 			  
 			</div>

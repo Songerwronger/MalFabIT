@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 			  
 			</div>
 			<a href="login.php">
-			<img src="account-svgrepo-com.svg" alt="" width="40" height="50">
+			<a href="signup.html" class="nav-link">Sign up</a>
 			</a>
 		  </div>
 		</div>
@@ -97,6 +97,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 												<img src="password-svgrepo-com.svg" height="30" width="30" style="margin-right: 85%; margin-top: -4.7rem;" alt="">
 											</div>
 											<button type="submit" class="btn mt-4">Submit</button>
+<?php if ($is_invalid): ?>
+	<div class="container-fluid">
+	<em  class="invalid-text fs-5" style="display: block; margin: 0 auto; text-align: center; margin-top: 2rem; z-index: 10; font-size: 0.5rem; color: red">Invalid login</em>
+
+	</div>
+<?php endif; ?>
 				      					</div>
 			      					</div>
 			      				</div>
@@ -120,12 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 
 
-<?php if ($is_invalid): ?>
-	<div class="container-fluid">
-	<em  class="text-white fs-2" style="display: block; margin: 0 auto; text-align: center; margin-top: 2rem; z-index: 10;">Invalid login</em>
 
-	</div>
-<?php endif; ?>
 
 
 <footer style="">
